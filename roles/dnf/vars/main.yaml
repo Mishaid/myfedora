@@ -18,3 +18,5 @@ dnf_packages_to_install:
   - git
   - keepassxc
   - g4music
+  - discord
+  - telegram-desktop

@@ -6,6 +6,34 @@
     allowerasing: true
   become: true
 
+- name: Download RPM Fusion Free repository package
+  ansible.builtin.get_url:
+    url: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
+    dest: "/tmp/rpmfusion-free-release.noarch.rpm"
+    mode: "0644"
+  become: true
+
+- name: Download RPM Fusion Nonfree repository package
+  ansible.builtin.get_url:
+    url: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
+    dest: "/tmp/rpmfusion-nonfree-release.noarch.rpm"
+    mode: "0644"
+  become: true
+
+- name: Install RPM Fusion Free repository
+  ansible.builtin.dnf:
+    name: "/tmp/rpmfusion-free-release.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+  become: true
+
+- name: Install RPM Fusion Nonfree repository
+  ansible.builtin.dnf:
+    name: "/tmp/rpmfusion-nonfree-release.noarch.rpm"
+    state: present
+    disable_gpg_check: true
+  become: true
+
 # Install Google Chrome
 - name: Install Chrome GPG key
   ansible.builtin.rpm_key:

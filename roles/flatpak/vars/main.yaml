@@ -1,6 +1,4 @@
 flatpak_packages:
   - md.obsidian.Obsidian
   - org.onlyoffice.desktopeditors
-  - org.telegram.desktop
   - page.tesk.Refine
-  - com.discordapp.Discord
