@@ -32,4 +32,4 @@
         state: latest
       become: true
 
-# TODO: Установка модулей VSCode???
+# TODO: VSCode module installation?

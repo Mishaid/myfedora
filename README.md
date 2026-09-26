@@ -8,6 +8,7 @@ Currently supported Fedora version: **44 (Gnome)**
 
 Things these roles do:
 - change gnome icons, cursor
+- configures gnome settings via dconf
 - installs several gnome extensions
 - `/etc/ssh_config`
 - VSCode installation and `.json` config

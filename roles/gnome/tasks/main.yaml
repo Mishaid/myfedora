@@ -1,3 +1,64 @@
+# dconf settings
+- name: Set dark theme
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/color-scheme"
+    value: "'prefer-dark'"
+    state: present
+
+- name: Set accent color
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/accent-color"
+    value: "'blue'"
+    state: present
+
+- name: Set window buttons layout
+  community.general.dconf:
+    key: "/org/gnome/desktop/wm/preferences/button-layout"
+    value: "'appmenu:minimize,maximize,close'"
+    state: present
+
+- name: Set input source
+  community.general.dconf:
+    key: "/org/gnome/desktop/input-sources/sources"
+    value: "[('xkb', 'us'), ('xkb', 'ru')]"
+    state: present
+
+- name: Set time format
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/clock-format"
+    value: "'24h'"
+    state: present
+
+- name: Set first day of the week
+  community.general.dconf:
+    key: "/org/gnome/desktop/calendar/week-start-day"
+    value: "'monday'"
+    state: present
+
+- name: Set home folder shortcut
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/home"
+    value: "['<Super>e']"
+    state: present
+
+- name: Set hide all windows shortcut
+  community.general.dconf:
+    key: "/org/gnome/desktop/wm/keybindings/show-desktop"
+    value: "['<Super>d']"
+    state: present
+
+- name: Set power-off shortcut
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/shutdown"
+    value: "['<Control><Alt>Delete']"
+    state: present
+
+- name: Disable log out shortcut
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/logout"
+    value: "@as []"
+    state: present
+
 # Gnome extensions
 - name: Install Gnome extension manager
   community.general.flatpak:
@@ -27,18 +88,6 @@
   ansible.builtin.command:
     cmd: gnome-extensions install /tmp/blur-my-shell@aunetx.shell-extension.zip --force
     creates: /home/mishaid/.local/share/gnome-shell/extensions/blur-my-shell@aunetx/metadata.json
-
-- name: Download Gnome Blur My Shell
-  ansible.builtin.get_url:
-    url: https://extensions.gnome.org/extension-data/azwallpaperazwallpaper.gitlab.com.v19.shell-extension.zip
-    dest: /tmp/azwallpaper@azwallpaper.gitlab.com.zip
-    owner: mishaid
-    mode: '0644'
-
-- name: Install Gnome Blur My Shell
-  ansible.builtin.command:
-    cmd: gnome-extensions install /tmp/azwallpaper@azwallpaper.gitlab.com.zip
-    creates: /home/mishaid/.local/share/gnome-shell/extensions/azwallpaper@azwallpaper.gitlab.com/metadata.json
 
 - name: Download Gnome AppIndicator
   ansible.builtin.get_url:
