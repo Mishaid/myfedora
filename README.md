@@ -17,7 +17,6 @@ Things these roles do:
 - git config in my home directory
 - installs several rmp packages with dnf and deletes defaults that I don't need
 - sets hostname
-- sets global umask
 - updates whole system
 
 ---

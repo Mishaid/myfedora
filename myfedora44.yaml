@@ -18,14 +18,6 @@
         name: "mishaid-{{ ansible_facts['board_name'] }}"
         use: systemd
 
-    - name: Set global umask
-      ansible.builtin.blockinfile:
-        path: /etc/bashrc
-        append_newline: true
-        prepend_newline: true
-        block: "umask 077"
-      become: true
-
     - name: Update whole system
       ansible.builtin.dnf:
         name: '*'
