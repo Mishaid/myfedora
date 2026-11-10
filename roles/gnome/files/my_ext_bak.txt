@@ -9,21 +9,22 @@ tray-pos='center'
 [azwallpaper]
 bing-wallpapers-downloaded=@as []
 prefs-visible-page=''
-slideshow-current-slide-index=0
-slideshow-current-wallpaper='pexels-7822971.jpg'
-slideshow-directory='/home/mishaid/spacebox/wall/spring'
-slideshow-queue=[{'name': 'pexels-7822971.jpg', 'date': '1779492582'}, {'name': 'pexels-kinkate-368260.jpg', 'date': '1779492599'}, {'name': 'pexels-eberhardgross-983275.jpg', 'date': '1779492522'}, {'name': 'pexels-sebastianbeck-2382941.jpg', 'date': '1779492597'}, {'name': 'pexels-carl-wyatt-654792-2237485.jpg', 'date': '1779492594'}, {'name': 'pexels-pille-kirsi-222198-1116977.jpg', 'date': '1779492595'}]
-slideshow-time-of-slide-start=uint64 1779996376428
+slideshow-current-slide-index=3
+slideshow-current-wallpaper='ae799c2f2f6614614c2fc3fc40bbec62.jpg'
+slideshow-directory='/home/mishaid/spacebox/wall/fall'
+slideshow-queue=[{'name': 'pexels-blooddrainer-6785690.jpg', 'date': '1780520494'}, {'name': 'pexels-alexmaksin55-9048872.jpg', 'date': '1780520549'}, {'name': '4a8ca5aeed85eb30ce663de9ecc45c85.jpg', 'date': '1779492581'}, {'name': 'ae799c2f2f6614614c2fc3fc40bbec62.jpg', 'date': '1779492593'}, {'name': '9e9a5ae64ebacd65a2ff8e2af2d8a733.jpg', 'date': '1779492596'}]
+slideshow-time-of-slide-start=uint64 1794307371206
 slideshow-timer-remaining=60
-update-notifier-project-version=19
+update-notifier-project-version=20
 
 [blur-my-shell]
+hacks-level=2
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_000000000000'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_default_rounded': {'name': <'Default rounded'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_000000000001'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_migrated_dynamic_blur': {'name': <'Migrated dynamic blur'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_migrated_dynamic_blur'>, 'params': <{'unscaled_radius': <60>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_liquid_glass': {'name': <'Liquid Glass'>, 'effects': <[<{'type': <'luminosity'>, 'id': <'effect_liquid_glass_luminosity'>, 'params': <{'saturation_multiplicator': <1.1000000000000001>}>}>, <{'type': <'refraction'>, 'id': <'effect_liquid_glass_refraction'>, 'params': <{'tint': <0>}>}>, <{'type': <'noise'>, 'id': <'effect_liquid_glass_noise'>, 'params': <{'noise': <0.10000000000000001>}>}>]>}, 'pipeline_vapor_glass': {'name': <'Vapor Glass'>, 'effects': <[<{'type': <'luminosity'>, 'id': <'effect_vapor_glass_luminosity'>, 'params': <{'saturation_multiplicator': <1.1000000000000001>}>}>, <{'type': <'wave'>, 'id': <'effect_vapor_glass_wave'>, 'params': <@a{sv} {}>}>, <{'type': <'refraction'>, 'id': <'effect_vapor_glass_refraction'>, 'params': <{'tint': <0>}>}>, <{'type': <'noise'>, 'id': <'effect_vapor_glass_noise'>, 'params': <{'noise': <0.10000000000000001>}>}>]>}, 'pipeline_classic_light_background': {'name': <'Classic Light Background'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_classic_light_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'color'>, 'id': <'effect_classic_light_color'>, 'params': <{'color': <(1.0, 1.0, 1.0, 0.25)>, 'blend_mode': <17>}>}>]>}, 'pipeline_classic_dark_background': {'name': <'Classic Dark Background'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_classic_dark_blur'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'color'>, 'id': <'effect_classic_dark_color'>, 'params': <{'color': <(0.40000000000000002, 0.40000000000000002, 0.40000000000000002, 0.34999999999999998)>, 'blend_mode': <17>}>}>]>}}
 rounded-blur-found=false
-settings-version=2
+settings-version=8
 
 [blur-my-shell/appfolder]
-brightness=0.59999999999999998
-sigma=30
+pipeline='pipeline_migrated_dynamic_blur'
 
 [blur-my-shell/applications]
 pipeline='pipeline_default'
@@ -33,9 +34,7 @@ pipeline='pipeline_default'
 
 [blur-my-shell/dash-to-dock]
 blur=false
-brightness=0.59999999999999998
 pipeline='pipeline_default_rounded'
-sigma=30
 static-blur=true
 style-dash-to-dock=0
 
@@ -43,21 +42,26 @@ style-dash-to-dock=0
 pipeline='pipeline_default'
 
 [blur-my-shell/overview]
+blur=true
 pipeline='pipeline_default'
 
 [blur-my-shell/panel]
 blur=false
-brightness=0.59999999999999998
 corner-radius=0
 pipeline='pipeline_default'
-sigma=30
+
+[blur-my-shell/popup]
+blur=false
+override-background=true
+pipeline='pipeline_default'
+preserve-shell-theme=false
+static-blur=true
 
 [blur-my-shell/screenshot]
 pipeline='pipeline_default'
 
 [blur-my-shell/window-list]
-brightness=0.59999999999999998
-sigma=30
+pipeline='pipeline_migrated_dynamic_blur'
 
 [dash-to-dock]
 apply-custom-theme=false
@@ -71,6 +75,7 @@ disable-overview-on-startup=false
 dock-position='BOTTOM'
 extend-height=false
 height-fraction=0.90000000000000002
+icon-size-fixed=false
 preferred-monitor=-2
 preferred-monitor-by-connector='DP-2'
 running-indicator-style='DOTS'

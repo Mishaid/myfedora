@@ -2,7 +2,7 @@
 - name: Add VSCode repo
   ansible.builtin.copy:
     src: files/vscode.repo
-    dest: /etc/yum.repos.d/vscode.repo
+    dest: /usr/share/dnf5/repos.d/vscode.repo
     owner: root
     group: root
     mode: '0644'

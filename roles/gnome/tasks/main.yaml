@@ -67,7 +67,7 @@
 
 - name: Download Gnome Dash To Dock
   ansible.builtin.get_url:
-    url: https://github.com/micheleg/dash-to-dock/releases/download/extensions.gnome.org-v105/dash-to-dock@micxgx.gmail.com.zip
+    url: https://github.com/micheleg/dash-to-dock/releases/download/extensions.gnome.org-v110/dash-to-dock@micxgx.gmail.com.zip
     dest: /tmp/dash-to-dock@micxgx.gmail.com.zip
     owner: mishaid
     mode: '0644'
@@ -79,7 +79,7 @@
 
 - name: Download Gnome Blur My Shell
   ansible.builtin.get_url:
-    url: https://github.com/aunetx/blur-my-shell/releases/download/v72/blur-my-shell@aunetx.shell-extension.zip
+    url: https://github.com/aunetx/blur-my-shell/releases/download/v77/blur-my-shell@aunetx.shell-extension.zip
     dest: /tmp/blur-my-shell@aunetx.shell-extension.zip
     owner: mishaid
     mode: '0644'
@@ -91,7 +91,7 @@
 
 - name: Download Gnome AppIndicator
   ansible.builtin.get_url:
-    url: https://github.com/ubuntu/gnome-shell-extension-appindicator/releases/download/v64/appindicatorsupport@rgcjonas.gmail.com.zip
+    url: https://github.com/ubuntu/gnome-shell-extension-appindicator/releases/download/v66/appindicatorsupport@rgcjonas.gmail.com.zip
     dest: /tmp/appindicatorsupport@rgcjonas.gmail.com.zip
     owner: mishaid
     mode: '0644'

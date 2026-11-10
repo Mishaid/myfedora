@@ -1,2 +1,0 @@
-Host 15.15.15.*
-        ProxyJump root@10.10.0.10

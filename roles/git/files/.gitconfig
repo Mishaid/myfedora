@@ -1,6 +1,0 @@
-[user]
-	name = Mecuriouseus
-	email = kozlovm609@gmail.com
-
-[includeIF "gitdir:~/spacebox/source/python/NetPulse/"]
-  path = ~/.gitconfig_netpulse

@@ -23,5 +23,3 @@
         name: '*'
         state: latest
       become: true
-
-# TODO: VSCode module installation?

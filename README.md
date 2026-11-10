@@ -2,7 +2,7 @@
 
 My custom ansible roles combined in one playbook for initial Desktop Fedora (Gnome) config, which fits my needs.
 
-Currently supported Fedora version: **44 (Gnome)**
+Currently supported Fedora version: **45 (Gnome)**
 
 ---
 
@@ -28,5 +28,5 @@ Requirements:
 
 `myfedora44.yaml` combines all roles and tasks. To run it use this command:
 ```bash
-ansible-playbook myfedora44.yaml --ask-become-pass
+ansible-playbook myfedora45.yaml --ask-become-pass
 ```
